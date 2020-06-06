@@ -1,0 +1,49 @@
+<?php
+//http://192.168.1.201/Unity-iPhone.ipa
+$apk_url = $_GET['apk'];
+echo <<<EOT
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>items</key>
+    <array>
+        <dict>
+            <key>assets</key>
+            <array>
+                <dict>
+                    <key>kind</key>
+                    <string>software-package</string>
+                    <key>url</key>
+                    <string>$apk_url</string>
+                </dict>
+                <dict>
+                    <key>kind</key>
+                    <string>display-image</string>
+                    <key>url</key>
+                    <string>https://gushiyue.github.io/triwin/1.jpg</string>
+                </dict>
+                <dict>
+                    <key>kind</key>
+                    <string>full-size-image</string>
+                    <key>url</key>
+                    <string>https://gushiyue.github.io/triwin/2.jpg</string>
+                </dict>
+            </array>
+            <key>metadata</key>
+            <dict>
+                <key>bundle-identifier</key>
+                <string>内测app的bundleidentifier</string>
+                <key>bundle-version</key>
+                <string>1.0.0</string>
+                <key>kind</key>
+                <string>software</string>
+                <key>title</key>
+                <string>triple win</string>
+            </dict>
+        </dict>
+    </array>
+</dict>
+</plist>
+EOT;
+?>
